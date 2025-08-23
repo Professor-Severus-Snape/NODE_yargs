@@ -1,5 +1,3 @@
-const yargs = require('yargs/yargs');
-
 const command = 'add';
 const describe = 'Добавить время к текущей дате';
 
