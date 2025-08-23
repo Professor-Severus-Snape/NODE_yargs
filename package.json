@@ -1,0 +1,13 @@
+{
+  "name": "node_yargs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "professor-severus-snape",
+  "license": "MIT",
+  "bin": {
+    "cmd": "./index.js"
+  },
+  "dependencies": {
+    "yargs": "^18.0.0"
+  }
+}
