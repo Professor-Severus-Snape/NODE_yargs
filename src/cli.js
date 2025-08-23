@@ -7,7 +7,7 @@ const cmdSub = require('./commands/sub');
 
 yargs(hideBin(process.argv))
   .parserConfiguration({
-    'short-option-groups': false // запрет сжатия коротких опций (например, защита от '-mm')
+    'short-option-groups': false, // запрет сжатия коротких опций (например, защита от '-mm')
   })
   .command(cmdCurrent) // .command({command: '', describe: '', builder: fn, handler: fn })
   .command(cmdAdd)

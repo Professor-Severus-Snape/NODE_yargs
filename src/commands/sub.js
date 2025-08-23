@@ -17,6 +17,19 @@ const builder = (yargs) =>
       alias: 'd',
       type: 'number',
       describe: 'Вычесть дни',
+    })
+    .check((argv) => {
+      // перехват ошибки в cli.js -> .fail()
+      if (
+        argv.year === undefined &&
+        argv.month === undefined &&
+        argv.date === undefined
+      ) {
+        throw new Error(
+          'Укажите, что именно нужно вычесть и/или сколько. Используйте флаг --year (-y), --month (-m) или --date (-d) с числовым значением.'
+        );
+      }
+      return true; // если проверка прошла успешно
     });
 
 const handler = (argv) => {
