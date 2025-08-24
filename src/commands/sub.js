@@ -26,14 +26,14 @@ const builder = (yargs) =>
         argv.date === undefined
       ) {
         throw new Error(
-          'Укажите, что именно нужно вычесть и/или сколько. Используйте флаг --year (-y), --month (-m) или --date (-d) с числовым значением.'
+          'Укажите, что именно нужно вычесть и/или сколько. Используйте флаг --year (-y), --month (-m) или --date (-d) с числовым значением.',
         );
       }
       return true; // если проверка прошла успешно
     });
 
 const handler = (argv) => {
-  let now = new Date();
+  const now = new Date();
 
   if (argv.year) {
     now.setFullYear(now.getFullYear() - argv.year);
